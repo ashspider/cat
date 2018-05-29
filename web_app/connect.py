@@ -32,7 +32,7 @@ def index():
         
         return 'That username already exists!'
 
-    return render_template('index.html')
+    return render_template('inner.html')
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
