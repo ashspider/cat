@@ -9,7 +9,12 @@ app.config['MONGO_URI'] = 'mongodb://engage48:engage48@ds149134.mlab.com:49134/h
 
 mongo = PyMongo(app)
 
+@app.route('/')
+def index():
+    if 'username' in session:
+        return 'You are logged in as ' + session['username']
 
+    return render_template('index.html')
     
     
     
