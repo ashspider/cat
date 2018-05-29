@@ -5,10 +5,16 @@ from flask import make_response
 from flask_cors import CORS, cross_origin
 import bcrypt
 
-app = Flask(__name__)
+
 
 app.config['MONGO_DBNAME'] = 'heroku_2g2nnp30'
 app.config['MONGO_URI'] = 'mongodb://engage48:engage48@ds149134.mlab.com:49134/heroku_2g2nnp30'
+
+app = Flask(__name__)
+CORS(app)
+
+
+app.config['MONGO_URI'] = MONGO_URI
 
 mongo = PyMongo(app)
 
