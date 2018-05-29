@@ -1,5 +1,8 @@
+import os,requests
 from flask import Flask, render_template, url_for, request, session, redirect
-from flask.ext.pymongo import PyMongo
+from flask_pymongo import PyMongo
+from flask import make_response
+from flask_cors import CORS, cross_origin
 import bcrypt
 
 app = Flask(__name__)
