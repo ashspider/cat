@@ -27,7 +27,7 @@ def index():
         if existing_user is None:
             hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
             users.insert({'name' : request.form['name'], 'password' : hashpass})
-            session['username'] = request.form['username']
+            session['name'] = request.form['name']
             return redirect(url_for('index'))
         
         return 'That username already exists!'
