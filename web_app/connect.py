@@ -20,7 +20,7 @@ def index():
     
     
     @app.route('/index', methods=['POST', 'GET'])
-def register():
+def index():
     if request.method == 'POST':
         users = mongo.db.users
         existing_user = users.find_one({'name' : request.form['name']})
