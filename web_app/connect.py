@@ -23,7 +23,7 @@ def index():
     if 'name' in session:
         return 'You are logged in as ' + session['name']
 
-    return render_template('index.html')
+    return render_template('inner.html')
     
     
     
